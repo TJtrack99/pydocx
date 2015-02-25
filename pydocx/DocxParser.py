@@ -933,4 +933,3 @@ class DocxParser(MulitMemoizeMixin):
         firstLine=None,
     ):
         return text
-#This is Timothy Jenson's fork
