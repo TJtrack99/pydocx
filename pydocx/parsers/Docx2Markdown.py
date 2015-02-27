@@ -30,3 +30,21 @@ class Docx2Markdown(DocxParser):
 
     def underline(self, text):
         return '***' + text + '***'
+
+    def hyperlink(self, text, href):
+        if text == '':
+            return ''
+        return '[' + text + '](' + href + ')'
+
+    def strike(self, text):
+        return '~~' + text + '~~'
+
+    def heading(self, text, heading_value):
+        #TODO check that this makes sense for deeper levels of headings too
+        if heading_value == 1:
+            return text + '\n==========\n'
+        elif heading_value == 2:
+            return text + '\n----------\n'
+        else: 
+            return '### ' + text
+
